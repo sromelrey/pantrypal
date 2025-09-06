@@ -143,7 +143,7 @@ export function SearchFilter() {
             <div className='flex flex-wrap gap-2'>
               {searchFilters.query && (
                 <Badge variant='secondary' className='flex items-center gap-1'>
-                  Search: "{searchFilters.query}"
+                  Search: &rdquo;{searchFilters.query}&rdquo;
                   <button
                     onClick={() => handleSearchChange("")}
                     className='hover:bg-gray-300 rounded-full p-0.5'

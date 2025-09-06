@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { MockData } from "./types";
 
 // Mock data for testing CRUD operations, search, and fuzzy matching

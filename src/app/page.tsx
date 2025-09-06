@@ -29,8 +29,6 @@ export default function Home() {
   const [showIngredientForm, setShowIngredientForm] = useState(false);
 
   const {
-    dishes,
-    ingredients,
     setDishes,
     setIngredients,
     getFilteredDishes,

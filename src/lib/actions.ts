@@ -13,8 +13,8 @@ import { mockData } from "./mock-data";
 
 // In-memory storage for demo purposes
 // In production, this would be replaced with actual database operations
-let dishes = [...mockData.dishes];
-let ingredients = [...mockData.ingredients];
+const dishes = [...mockData.dishes];
+const ingredients = [...mockData.ingredients];
 let nextDishId = Math.max(...dishes.map((d) => d.id)) + 1;
 let nextIngredientId = Math.max(...ingredients.map((i) => i.id)) + 1;
 
