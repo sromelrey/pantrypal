@@ -16,7 +16,7 @@ interface DishCardProps {
 }
 
 export function DishCard({ dish, onEdit }: DishCardProps) {
-  const { addToast } = usePantryPalStore();
+  // const { addToast } = usePantryPalStore();
   const { addToast: showToast } = useToast();
 
   const handleDelete = async () => {

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -129,7 +130,19 @@ export default function Home() {
         <Dialog open={showDishForm} onOpenChange={setShowDishForm}>
           <DialogContent className='max-w-2xl max-h-[90vh] overflow-y-auto'>
             <DishForm
-              dish={editingDish || undefined}
+              dish={
+                editingDish
+                  ? {
+                      ...editingDish,
+                      // Convert ingredients to array of ids if needed
+                      ingredients: Array.isArray(editingDish.ingredients)
+                        ? editingDish.ingredients.map((ing: any) =>
+                            typeof ing === "number" ? ing : ing.id
+                          )
+                        : [],
+                    }
+                  : undefined
+              }
               onClose={handleCloseForms}
               onSuccess={handleCloseForms}
             />
